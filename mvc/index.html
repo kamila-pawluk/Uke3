@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div id="groupWithWords" onload="updateView()"> 
+        <h1>Fill your history</h1>
+        <h2>Here you can choose the words to fill the history</h2>
+        <div id="tableNames" class="table">
+        <button id="name" onclick="setName()" class="buttons">Agata</button>
+        <button id="age" onclick="setAge()" class="buttons">28</button>
+        <button id="city" onclick="setCity()" class="buttons">Sarpsborg</button>
+        <button id="color" onclick="setColor()" class="buttons">blue</button>
+    </div>
+</div>
+
+    <div id="historyDiv"></div>
+     
+    <script src="./script.js"></script>
+</body>
+</html>
