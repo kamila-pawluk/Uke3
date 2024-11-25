@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div id="groupWithWords" onload="checkIfCorrect()"> 
+        <h1>Fill your history</h1>
+        <h2>Here you can choose the words to fill the history</h2>
+        <div id="tableNames" class="table">
+        <button id="name" onclick="setName()" class="buttons">Agata</button>
+        <button id="age" onclick="setAge()" class="buttons">28</button>
+        <button id="city" onclick="setCity()" class="buttons">Sarpsborg</button>
+        <button id="color" onclick="setColor()" class="buttons">blue</button>
+    </div>
+</div>
+
+    <div id="historyToFill">
+        <span id="fillTheName">
+            <span id="nameToFill">_______</span> was a 
+            <span id="ageToFill">_______</span>
+            -year-old who lived in the vibrant city of 
+            <span id="cityToFill">_______</span>. 
+            Known for their love of all things 
+            <span id="colorToFill">_______</span>
+            , they surrounded themselves with objects, 
+            clothes, and even furniture in their favorite shade.  </span>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
