@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" id="inputField">
+        <button onclick="reverseString()">Submit</button>
+        <p id="reversedOutput"></p>
+    </div>
+    <script>
+        function reverseString(){
+            let clientsInput = document.getElementById('inputField').value;
+            let reversed = "";
+            for(let i = clientsInput.length - 1; i>=0; i--){
+                reversed += clientsInput[i];
+            }
+            document.getElementById('reversedOutput').innerHTML = `${reversed}`;
+            
+        }
+    </script>
+</body>
+</html>
