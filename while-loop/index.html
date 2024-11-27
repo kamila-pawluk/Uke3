@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Lag en funksjon som generer 2 random tall så lenge tallene er ulike fra hverandre.
+      Når de er like print ut teksten "Equal numbers found" - samt hvilke tall det ble =)
+kan eventuelt også console.log() tallene for hver runde
+OBS: Nettleseren er ikke glad i å oppdatere view mens i en while-loop! -->
+    <div id="app">
+        <div id="group">
+            <h1>Random numbers generator</h1>
+            <button onclick="generateRandomNumber()" style="border: 2px solid black;">
+                Generate numbers</button>
+            <p id="printOut" style="border: 2px solid black; width: 400px; height: 50px;"></p>
+        </div>
+
+    </div>
+    <script>
+        function generateRandomNumber(){
+            let rng, rng1;
+            while (true){
+                rng = Math.floor(Math.random() * 10);
+                rng1 = Math.floor(Math.random() * 10);
+                console.log(`${rng}` + " " + `${rng1}`);
+
+                    if(rng === rng1){
+                        document.getElementById('printOut').innerHTML = "Equal numbers found: no.1:   " + `${rng}` 
+                        + "  no.2:  " + `${rng1}`;                        
+                    } else {
+                        setTimeout(generateRandomNumber, 100);      
+                 }
+                 break;
+                }
+             }
+    
+
+    </script>
+</body>
+</html>
