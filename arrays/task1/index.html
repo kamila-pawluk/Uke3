@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div id="group">
+            <h1>Arrays</h1>
+            <button onclick="startLoop()">Check the animals in the array</button>
+            <p id="view" style="border: 2px solid black; height: 40px;" ></p>
+        </div>
+    </div>
+    
+    <script>
+        let arrayAnimals = [
+            "cat", "dog", "bird", "elephant", "giraffe"
+        ]
+        function startLoop(){
+                for(let i= 0; i<arrayAnimals.length; i++){
+                    console.table(arrayAnimals[i]);
+                    document.getElementById('view').innerHTML += arrayAnimals[i] + "  ";
+                }
+
+        }
+    </script>
+</body>
+</html>

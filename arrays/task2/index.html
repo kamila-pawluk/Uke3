@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Add products to your shopping cart</h1>
+        <input type="text" id="customerInput">
+        <button onclick="updateShoppingCart()">Add new product</button>
+        <ol id="shoppingListOutput">Your shopping cart: </ol>
+    </div>
+
+    <script>
+        var shoppingList = [];
+
+
+        function updateShoppingCart(){
+            var newProduct = document.getElementById('customerInput').value;
+            if(!shoppingList.includes(newProduct)){
+                shoppingList.push(newProduct);
+                document.getElementById('shoppingListOutput').innerHTML +=  `<li> ${newProduct} </li>`;
+            } else {
+                alert("This product is already in your shopping list!");
+            }
+        }
+    </script>
+</body>
+</html>
