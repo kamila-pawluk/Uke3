@@ -1,0 +1,52 @@
+body{
+    background-color: antiquewhite;
+    color: rgba(103, 36, 36, 0.969);
+    text-align: center;
+}
+.drawBall{
+position: relative;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+background: black;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 20px auto;
+box-shadow: 0 0 10px black;
+}
+.cut {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    opacity: 1;
+    font-size: large;
+}
+.advice{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    text-align: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: small;
+}
