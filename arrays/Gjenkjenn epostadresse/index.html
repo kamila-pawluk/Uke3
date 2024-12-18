@@ -17,7 +17,7 @@ I tillegg: teksten skal inneholde et punktum etter @. -->
     <div id="app">
         <h1>Check if input is an email address</h1>
 
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" placeholder="example@example.com">
 
         <button onclick="validateEmail()">Check if it's email address</button>
 
@@ -27,15 +27,18 @@ I tillegg: teksten skal inneholde et punktum etter @. -->
     <script>
 
     function validateEmail() {
-        let check = "abc@gfd.com"
-        let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        // let validation = /[A-Za-z0-9][\w+_.-]{1,62}[\w]@[\w.-]{1,255}.[A-Za-z]{2,}/;
-        let boolean1 = regex.test(check);
+    const emailInput = document.getElementById('email').value.trim();
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let isValid = regex.test(emailInput);
         
-        document.getElementById('output').innerHTML = `${boolean1}`;
-    }
-// nie zaciąga z tekstu!
+        const output = document.getElementById('output');
+        if (isValid) {
+            output.textContent = "E-mail is correct.";
+        } else {
+            output.textContent = "This is not valid e-mail.";
 
+        }
+    }
     </script>
 </body>
 </html>
