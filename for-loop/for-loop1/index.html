@@ -9,63 +9,43 @@
     <div>Counting vowels
     <!-- Vokaler: a, e, i, o, u, y, æ, ø, å -->
      <div id="letters"></div>
-     <input type="text" id="input">
+     <input type="text" id="input" placeholder="Add text">
      <button onclick="countVowels()">Count</button>
      <p id="output"></p>
      </div>
 
      <script>
         function countVowels(){     
-            var inputString = document.getElementById('input').value; 
-            var clientsInput = inputString;
-            let aCounter = 0;
-            let eCounter = 0;
-            let iCounter = 0;
-            let oCounter = 0;
-            let uCounter = 0;
-            let yCounter = 0;
-            let æCounter = 0;
-            let øCounter = 0;
-            let åCounter = 0;
-            let outputFinal = "";
+            var inputString = document.getElementById('input').value.toLowerCase(); 
+            const vowels = ['a', 'e', 'i', 'o', 'u', 'y', 'æ', 'ø', 'å'];
 
-            let arrayCustom = [aCounter, eCounter, iCounter, oCounter, uCounter,
-             yCounter, æCounter, øCounter, åCounter]
-        
-            for(let i=0; i<=clientsInput.length; i++){
-                if('a'.includes(clientsInput[i])){
-                    aCounter++;
-                } else if ('e'.includes(clientsInput[i])){
-                    eCounter++;
-                } else if ('i'.includes(clientsInput[i])){
-                    iCounter++;
-                } else if ('o'.includes(clientsInput[i])){
-                    oCounter++;
-                } else if ('u'.includes(clientsInput[i])){
-                    uCounter++;
-                
-                } else if ('y'.includes(clientsInput[i])){
-                    yCounter++;
-                
-                } else if ('æ'.includes(clientsInput[i])){
-                    æCounter++;
-                
-                } else if ('ø'.includes(clientsInput[i])){
-                    øCounter++;
-                
-                } else if ('å'.includes(clientsInput[i])){
-                    åCounter++;
-                }
-                for(let y=0; y<=arrayCustom.length; y++){
-                outputFinal += arrayCustom[y];
+            const vowelCounts = {
+                a: 0,
+                e: 0,
+                i: 0,
+                o: 0,
+                u: 0,
+                y: 0,
+                æ: 0,
+                ø: 0,
+                å: 0
+            };
+            
+         for(let i = 0; i < inputString.length; i++){
+                const char = inputString[i];
+                if(vowels.includes(char)){
+                    vowelCounts[char]++;
                 }
             }
-                    
-            console.log(arrayCustom);
-            document.getElementById('output').innerHTML = `${outputFinal}`;
+
+             let outputFinal = "Number of vowels:<br>";
+            for(const vowel of vowels){
+                outputFinal += `${vowel.toUpperCase()}: ${vowelCounts[vowel]}<br>`;
             }
+
+            document.getElementById('output').innerHTML = outputFinal;
+         }
         
      </script>
-     <!-- dokonczyc bo nie wiem -->
 </body>
 </html>
