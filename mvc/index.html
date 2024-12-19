@@ -6,16 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body onload="updateView()">
 
-    <div id="groupWithWords" onload="updateView()"> 
+    <div id="groupWithWords" > 
         <h1>Fill your history</h1>
         <h2>Here you can choose the words to fill the history</h2>
         <div id="tableNames" class="table">
-        <button id="name" onclick="setName()" class="buttons">Agata</button>
-        <button id="age" onclick="setAge()" class="buttons">28</button>
-        <button id="city" onclick="setCity()" class="buttons">Sarpsborg</button>
-        <button id="color" onclick="setColor()" class="buttons">blue</button>
+        <button id="nameButton" onclick="setName()" class="buttons">Agata</button>
+        <button id="ageButton" onclick="setAge()" class="buttons">28</button>
+        <button id="cityButton" onclick="setCity()" class="buttons">Sarpsborg</button>
+        <button id="colorButton" onclick="setColor()" class="buttons">blue</button>
     </div>
 </div>
 
