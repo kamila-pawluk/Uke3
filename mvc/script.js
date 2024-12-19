@@ -5,7 +5,6 @@ let city = "________";
 let color = "________";
 
 //View
-updateView();
 function updateView(){
     let html =`
     <div id="historyToFill">
@@ -15,38 +14,40 @@ function updateView(){
         -year-old who lived in the vibrant city of 
         <span id="cityToFill">${city}</span>. 
         Known for their love of all things 
-        <span id="colorToFill">_${color}</span>
+        <span id="colorToFill">${color}</span>
         , they surrounded themselves with objects, 
         clothes, and even furniture in their favorite shade.  </span>
 
 </div>
-`
+`;
 document.getElementById('historyDiv').innerHTML = html;
 }
 
 //Controller
 function setName(){
     let buttonName = document.getElementById('name');
-    name1.innerHTML = buttonName.outerHTML;
-    buttonName.style.opacity = 0.5;
+    name1 = buttonName.textContent;
+    buttonName.disabled = true;
+    updateView();
+
 
 }
 function setAge(){
     let buttonName = document.getElementById('age');
-    age.innerHTML = buttonName.outerHTML;
-    buttonName.style.opacity = 0.5;
+    age = buttonName.textContent;
+    buttonName.disabled = true;
     updateView();
 
 }
 function setCity(){
     let buttonName = document.getElementById('city');
-    city.innerHTML = buttonName.outerHTML;
-    buttonName.style.opacity = 0.5;
+    city = buttonName.textContent;
+    buttonName.disabled = true;
     updateView();
 }
 function setColor(){
     let buttonName = document.getElementById('color');
-    color.innerHTML = buttonName.outerHTML;
-    buttonName.style.opacity = 0.5;
+    color = buttonName.textContent;
+    buttonName.disabled = true;
     updateView();
 }
